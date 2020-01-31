@@ -1,4 +1,4 @@
-# moViesVying
+# moviesVying
 Movie Vying
 
 I'm going to be making an application called Movie Vying.
