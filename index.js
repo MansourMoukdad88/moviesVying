@@ -5,6 +5,9 @@ const fetchData = async (searchTerm) => {
       s: searchTerm
     }
   });
+  if(response.data.Error) {
+    return [];
+  }
   return response.data.Search;
 }
 
@@ -21,7 +24,6 @@ const onInput = async event => {
     `;
     document.querySelector('#target').appendChild(div)
   }
-  
 }
 
 input.addEventListener('input', debounce(onInput, 500));
