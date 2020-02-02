@@ -5,7 +5,7 @@ const fetchData = async (searchTerm) => {
       s: searchTerm
     }
   });
-  if(response.data.Error || ) {
+  if(response.data.Error) {
     return [];
   }
   return response.data.Search;
@@ -30,12 +30,14 @@ const onInput = async event => {
   const movies = await fetchData(event.target.value);
   dropdown.classList.add('is-active');
 
-  for(let movie of movies) {
+  resultsWrapper.innerHTML = "";
 
+  for(let movie of movies) {
     const option = document.createElement('a');
+    const imgSrc = movie.Poster === 'N/A' ? '' : movie.Poster
     option.classList.add('dropdown-item')
     option.innerHTML = `
-    <img src="${movie.Poster}">
+    <img src="${imgSrc}">
     <h1>${movie.Title}</h1>
     `;
     resultsWrapper.appendChild(option)
