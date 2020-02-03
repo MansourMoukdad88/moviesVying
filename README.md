@@ -22,3 +22,8 @@ about them.
 
 
 # You can see it on Youtube: https://www.youtube.com/watch?v=q7WgY0ASxg0
+# For More See My YouTube Channel: https://www.youtube.com/channel/UCmF8WA70Lpjq7E2GEnyH5_g?view_as=subscriber
+
+# Contact: 
+  LinkedIn: https://www.linkedin.com/in/mansour-al-moukdad-b968a1107/
+  Twitter: https://twitter.com/mansour_moukdad
