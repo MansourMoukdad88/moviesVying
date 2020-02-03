@@ -71,6 +71,12 @@ const runComparison = () => {
 
 
 const movieTemplate = (movieDetails) => {
+  const dollars =  parseInt(movieDetails.BoxOffice.replace(/\$/g, '').replace(/,/g, ''))
+  const metascore = parseInt(movieDetails.Metascore);
+  const imdbRating = parseFloat(movieDetails.imdbRating);
+  const imdbVotes = parseInt(movieDetails.imdbVotes.replace(/,/g, ''));
+  console.log(dollars, metascore, imdbRating,imdbVotes);
+  
   return `
   <article class="media">
     <figure class="media-left">
@@ -86,25 +92,30 @@ const movieTemplate = (movieDetails) => {
       </div>
     </div>
   </article>
+
   <article class="notification is-primary">
     <p class="title">${movieDetails.Awards}</p>
     <p class="subtitle">Awards</p>
   </article>
+  
   <article class="notification is-primary">
-  <p class="title">${movieDetails.BoxOffice}</p>
-  <p class="subtitle">Box Office</p>
-</article>
-<article class="notification is-primary">
-<p class="title">${movieDetails.Metascore}</p>
-<p class="subtitle">MetaScore</p>
-</article>
-<article class="notification is-primary">
-<p class="title">${movieDetails.imdbRating}</p>
-<p class="subtitle">IMDB Rating</p>
-</article>
-<article class="notification is-primary">
-<p class="title">${movieDetails.imdbVotes}</p>
-<p class="subtitle">IMDB Votes</p>
-</article>
+    <p class="title">${movieDetails.BoxOffice}</p>
+    <p class="subtitle">Box Office</p>
+  </article>
+
+  <article class="notification is-primary">
+    <p class="title">${movieDetails.Metascore}</p>
+    <p class="subtitle">MetaScore</p>
+  </article>
+
+  <article class="notification is-primary">
+    <p class="title">${movieDetails.imdbRating}</p>
+    <p class="subtitle">IMDB Rating</p>
+  </article>
+  
+  <article class="notification is-primary">
+    <p class="title">${movieDetails.imdbVotes}</p>
+    <p class="subtitle">IMDB Votes</p>
+  </article>
   `;
 };
