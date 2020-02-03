@@ -103,27 +103,27 @@ const movieTemplate = (movieDetails) => {
     </div>
   </article>
 
-  <article class="notification is-primary">
+  <article data-value="${awards}" class="notification is-primary">
     <p class="title">${movieDetails.Awards}</p>
     <p class="subtitle">Awards</p>
   </article>
   
-  <article class="notification is-primary">
+  <article data-value="${dollars}" class="notification is-primary">
     <p class="title">${movieDetails.BoxOffice}</p>
     <p class="subtitle">Box Office</p>
   </article>
 
-  <article class="notification is-primary">
+  <article data-value="${metascore}" class="notification is-primary">
     <p class="title">${movieDetails.Metascore}</p>
     <p class="subtitle">MetaScore</p>
   </article>
 
-  <article class="notification is-primary">
+  <article data-value="${imdbRating}" class="notification is-primary">
     <p class="title">${movieDetails.imdbRating}</p>
     <p class="subtitle">IMDB Rating</p>
   </article>
   
-  <article class="notification is-primary">
+  <article data-value="${imdbVotes}" class="notification is-primary">
     <p class="title">${movieDetails.imdbVotes}</p>
     <p class="subtitle">IMDB Votes</p>
   </article>
