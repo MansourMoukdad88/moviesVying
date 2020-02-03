@@ -13,3 +13,12 @@ about them.
 - Build autocomplete widget from scratch
 - Styling: I need to save time to move for functionalities, so I will use `Bulma CSS`  framework.
 - #Challenge: To render the second side of Vying, I need to duplicating my code in very BAD way, and the challenge here is to make my code REUSABLE. So I refactored all the codes by made a general config function and take advantages of ES6 features.
+
+# Here is the Movie Vying
+![](images/01.png)
+![](images/02.png)
+![](images/03.png)
+
+
+
+# You can see it on Youtube: https://www.youtube.com/watch?v=q7WgY0ASxg0
