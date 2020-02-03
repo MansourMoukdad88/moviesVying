@@ -20,25 +20,17 @@ const createAutoComplete = ({root, renderOption, onOptionSelect, inputValue, fet
       dropdown.classList.remove('is-active');
       return;
     }
-
     resultsWrapper.innerHTML = "";
     dropdown.classList.add('is-active');
-
     for(let item of items) {
-      // console.log(item.imdbID); 
-
       const option = document.createElement('a');
       option.classList.add('dropdown-item')
       option.innerHTML = renderOption(item);
-
       option.addEventListener('click', ()=> {
         dropdown.classList.remove('is-active');
         input.value = inputValue(item)
-        // console.log("item details", item);
-
         onOptionSelect(item)
-      })
-      
+      })      
       resultsWrapper.appendChild(option)
     }
   }
@@ -50,5 +42,4 @@ const createAutoComplete = ({root, renderOption, onOptionSelect, inputValue, fet
       // input.value = " "  // Clear the input if we click out of dropdown
     }
   })
-
 }
